@@ -1,0 +1,39 @@
+.module-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    table-layout:fixed;
+
+}
+
+.module-table th{
+
+    text-align:left;
+
+    color:#64748b;
+
+    font-size:14px;
+
+    padding:16px 14px;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.module-table td{
+
+    padding:18px 14px;
+
+    border-top:1px solid #eef2f7;
+
+    font-size:15px;
+
+}
+
+.module-table tbody tr:hover{
+
+    background:#f8fafc;
+
+}

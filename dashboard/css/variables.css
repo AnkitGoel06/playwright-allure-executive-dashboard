@@ -1,0 +1,85 @@
+/*=========================================================
+  QA Insight Dashboard
+  Design Tokens
+=========================================================*/
+
+:root {
+
+    /* ========= Brand ========= */
+
+    --primary: #2563EB;
+    --primary-light: #DBEAFE;
+
+    --success: #16A34A;
+    --success-light: #DCFCE7;
+
+    --danger: #DC2626;
+    --danger-light: #FEE2E2;
+
+    --warning: #D97706;
+    --warning-light: #FEF3C7;
+
+    --info: #0284C7;
+    --info-light: #E0F2FE;
+
+    /* ========= Neutral ========= */
+
+    --background: #F5F7FB;
+
+    --panel: #FFFFFF;
+
+    --sidebar: #111827;
+
+    --sidebar-hover: #1F2937;
+
+    --border: #E5E7EB;
+
+    /* ========= Text ========= */
+
+    --text-primary: #111827;
+
+    --text-secondary: #6B7280;
+
+    --text-muted: #9CA3AF;
+
+    /* ========= Radius ========= */
+
+    --radius-sm: 8px;
+
+    --radius: 12px;
+
+    --radius-lg: 18px;
+
+    /* ========= Shadow ========= */
+
+    --shadow:
+
+        0 2px 8px rgba(15,23,42,.06);
+
+    --shadow-hover:
+
+        0 8px 20px rgba(15,23,42,.10);
+
+    /* ========= Layout ========= */
+
+    --sidebar-width: 250px;
+
+    --header-height: 72px;
+
+    --panel-gap: 24px;
+
+    --transition: .25s ease;
+
+    /* ========= Spacing ========= */
+
+--space-1: 4px;
+--space-2: 8px;
+--space-3: 12px;
+--space-4: 16px;
+--space-5: 20px;
+--space-6: 24px;
+--space-8: 32px;
+--space-10: 40px;
+--space-12: 48px;
+
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Local Execution",
+  "type": "playwright",
+  "buildName": "Sprint-1 Automation",
+  "buildOrder": 1,
+  "buildUrl": "http://localhost",
+  "reportUrl": "http://localhost",
+  "reportName": "Commerce Automation Report"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Assertion Failure",
+    "matchedStatuses": ["failed"],
+    "messageRegex": ".*expect.*"
+  },
+  {
+    "name": "Locator Issues",
+    "matchedStatuses": ["broken"],
+    "traceRegex": ".*locator.*"
+  },
+  {
+    "name": "Timeout",
+    "matchedStatuses": ["broken"],
+    "messageRegex": ".*Timeout.*"
+  },
+  {
+    "name": "Network Failure",
+    "matchedStatuses": ["broken"],
+    "messageRegex": ".*ERR_.*"
+  },
+  {
+    "name": "Application Bug",
+    "matchedStatuses": ["failed"]
+  }
+]

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QA Insight Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <header class="qa-header">
+
+            <div class="header-left">
+
+                <h1>QA Insight</h1>
+
+                <p>Executive Test Analytics</p>
+
+                <div class="build-info">
+
+                    <span class="status success">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Success
+                    </span>
+
+                    <span>Build #128</span>
+
+                    <span>Release 5.4</span>
+
+                    <span>QA</span>
+
+                    <span>Chrome 125</span>
+
+                    <span>11 Jul 2026, 10:15 AM</span>
+
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <button class="btn btn-outline">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Open Allure
+                </button>
+
+                <button class="btn btn-primary">
+                    <i class="fa-solid fa-download"></i>
+                    Export Report
+                </button>
+
+            </div>
+
+        </header>
+
+        <section class="kpi-section">
+
+            <div class="pass-rate-card">
+
+                <div class="metric-title">Pass Rate</div>
+
+                <div class="pass-rate-body">
+
+                    <div class="gauge-placeholder" id="passRate">
+                        0%
+                    </div>
+
+                    <div class="pass-change" id="passRateChange">
+                        --
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="summary-strip">
+
+                <div class="summary-item">
+
+                    <span class="label">Tests</span>
+
+                    <span class="value" id="totalTests">0</span>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span class="label">Passed</span>
+
+                    <span class="value success" id="passedTests">0</span>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span class="label">Failed</span>
+
+                    <span class="value failed" id="failedTests">0</span>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span class="label">Broken</span>
+
+                    <span class="value warning" id="brokenTests">0</span>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span class="label">Skipped</span>
+
+                    <span class="value skipped" id="skippedTests">0</span>
+
+                </div>
+
+                <div class="summary-item duration">
+
+                    <span class="label">Duration</span>
+
+                    <span class="value" id="duration">0s</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="overview-section">
+
+            <div class="module-card">
+
+                <div class="card-header">
+                    <h2>Module Overview</h2>
+                    <span>BDD Features</span>
+                </div>
+
+                <table class="module-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Module</th>
+                            <th>Tests</th>
+                            <th>Pass %</th>
+                            <th>Failed</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="moduleTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="trend-card">
+
+                <div class="card-header">
+
+                    <h2>Trend</h2>
+
+                    <select>
+
+                        <option>Last 14 Days</option>
+
+                    </select>
+
+                </div>
+
+                <canvas id="trendChart"></canvas>
+
+            </div>
+
+
+            <div class="filter-card">
+
+                <div class="card-header">
+
+                    <h2>Filters</h2>
+
+                </div>
+
+                <div class="filter-group">
+
+                    <label>Environment</label>
+
+                    <select id="environmentFilter"></select>
+
+                </div>
+
+                <div class="filter-group">
+
+                    <label>Browser</label>
+
+                    <select id="browserFilter"></select>
+
+                </div>
+
+                <div class="filter-group">
+
+                    <label>Release</label>
+
+                    <select id="releaseFilter"></select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

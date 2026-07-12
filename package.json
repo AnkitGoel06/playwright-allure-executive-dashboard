@@ -1,0 +1,30 @@
+{
+  "name": "playwright-allure-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+  "bddgen": "bddgen",
+  "test": "npm run bddgen && playwright test",
+  "test:headed": "npm run bddgen && playwright test --headed",
+
+  "allure:generate": "node scripts/copyHistory.js && allure generate allure-results --clean -o allure-report",
+
+  "allure:open": "allure open allure-report",
+
+  "allure:serve": "allure serve allure-results",
+
+  "dashboard:generate": "node scripts/dashboardGenerator.js"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.0.0",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "allure-js-commons": "^3.10.2",
+    "allure-playwright": "^3.10.2",
+    "playwright-bdd": "^9.2.0"
+  }
+}

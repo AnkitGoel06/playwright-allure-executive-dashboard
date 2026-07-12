@@ -1,0 +1,26 @@
+[
+    {
+        "buildOrder": 1,
+        "reportUrl": "http://localhost",
+        "reportName": "Commerce Automation Report",
+        "data": {
+            "duration": 10222
+        }
+    },
+    {
+        "buildOrder": 1,
+        "reportUrl": "http://localhost",
+        "reportName": "Commerce Automation Report",
+        "data": {
+            "duration": 11402
+        }
+    },
+    {
+        "buildOrder": 1,
+        "reportUrl": "http://localhost",
+        "reportName": "Commerce Automation Report",
+        "data": {
+            "duration": 14055
+        }
+    }
+]
