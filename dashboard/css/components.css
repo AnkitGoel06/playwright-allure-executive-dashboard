@@ -438,52 +438,6 @@
     background:linear-gradient(90deg,#22c55e,#16a34a);
 }
 
-.failed-text{
-
-    display:inline-flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    min-width:32px;
-
-    height:28px;
-
-    padding:0 10px;
-
-    border-radius:999px;
-
-    background:#fef2f2;
-
-    color:#dc2626;
-
-    font-weight:700;
-}
-
-.passed-text{
-
-    display:inline-flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    min-width:32px;
-
-    height:28px;
-
-    padding:0 10px;
-
-    border-radius:999px;
-
-    background:#ecfdf5;
-
-    color:#16a34a;
-
-    font-weight:700;
-}
-
 .trend-card{
 
     background:#fff;
