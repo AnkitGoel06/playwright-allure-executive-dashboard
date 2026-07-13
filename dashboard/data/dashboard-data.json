@@ -1,11 +1,11 @@
 {
-    "generatedOn": "2026-07-12T15:33:35.337Z",
+    "generatedOn": "2026-07-13T11:31:34.538Z",
     "header": {
         "reportName": "Commerce Automation Report",
         "totalTests": 15,
         "passed": 8,
         "failed": 7,
-        "duration": 13811,
+        "duration": 13562,
         "environment": "QA",
         "browser": "Chromium",
         "release": "5.4",
@@ -23,12 +23,12 @@
             "total": 15
         },
         "time": {
-            "start": 1783864604598,
-            "stop": 1783864618409,
-            "duration": 13811,
-            "minDuration": 12,
-            "maxDuration": 4004,
-            "sumDuration": 18877
+            "start": 1783920285317,
+            "stop": 1783920298879,
+            "duration": 13562,
+            "minDuration": 21,
+            "maxDuration": 4853,
+            "sumDuration": 20358
         }
     },
     "suites": {
@@ -47,8 +47,8 @@
                 }
             },
             {
-                "uid": "23c65f0db8cd2111e631a3d448e92b9a",
-                "name": "Quote",
+                "uid": "717c13d1cf04dd5d4cee3118f3127eb0",
+                "name": "Checkout",
                 "statistic": {
                     "failed": 2,
                     "broken": 0,
@@ -59,8 +59,8 @@
                 }
             },
             {
-                "uid": "717c13d1cf04dd5d4cee3118f3127eb0",
-                "name": "Checkout",
+                "uid": "23c65f0db8cd2111e631a3d448e92b9a",
+                "name": "Quote",
                 "statistic": {
                     "failed": 2,
                     "broken": 0,
@@ -126,6 +126,15 @@
         ]
     },
     "history": [
+        {
+            "build": 5,
+            "label": "#5",
+            "total": 15,
+            "passed": 8,
+            "failed": 7,
+            "passRate": 53.3,
+            "duration": 0.2
+        },
         {
             "build": 4,
             "label": "#4",
@@ -205,8 +214,8 @@
             "environment": "QA",
             "browser": "Chromium",
             "release": "5.4",
-            "generatedOn": "2026-07-12T15:33:35.338Z",
-            "duration": "13.8 sec"
+            "generatedOn": "2026-07-13T11:31:34.540Z",
+            "duration": "13.6 sec"
         },
         "topSlowTests": [],
         "recentFailures": []
