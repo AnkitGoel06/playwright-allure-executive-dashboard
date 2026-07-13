@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const AllureParser = require("./allureParser");
+const WidgetBuilder = require("./WidgetBuilder");
 
 const parser = new AllureParser();
 
@@ -10,6 +11,15 @@ const suites = parser.getSuites();
 const categories = parser.getCategories();
 const environment = parser.getEnvironment();
 const history = parser.getHistoryTrend();
+const durationHistory = parser.getDurationTrend();
+const widgetBuilder = new WidgetBuilder(parser);
+
+const durationMap = new Map(
+    durationHistory.map(item => [
+        item.buildOrder,
+        Number((item.data.duration / 60000).toFixed(1))
+    ])
+);
 
 const dashboard = {
     generatedOn: new Date().toISOString(),
@@ -53,10 +63,11 @@ const dashboard = {
                 ((run.data.passed / run.data.total) * 100).toFixed(1)
             ),
 
-        duration:
-            Number((summary.time.duration / 60000).toFixed(1))
+        duration: durationMap.get(run.buildOrder) ?? 0
 
-    }))
+    })),
+
+    widgetData: widgetBuilder.build()
 };
 
 const outputFolder = path.join(__dirname, "..", "dashboard", "data");

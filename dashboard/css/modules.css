@@ -2,7 +2,7 @@
 
     display:grid;
 
-    grid-template-columns:2fr .8fr 2fr .8fr;
+    grid-template-columns: minmax(180px, 2fr) 90px minmax(220px, 3fr) 70px;
 
     padding:0 8px 14px;
 
@@ -14,9 +14,11 @@
 
     letter-spacing:.08em;
 
-    color:#94a3b8;
+    color:#64748b;
 
     border-bottom:1px solid #edf2f7;
+    margin-bottom: 8px;
+    column-gap: 16px;
 }
 
 /* -------------------------- */
@@ -25,17 +27,22 @@
 
     display:grid;
 
-    grid-template-columns:2fr .8fr 2fr .8fr;
+    grid-template-columns: minmax(180px, 2fr) 90px minmax(220px, 3fr) 70px;
 
     align-items:center;
 
     gap:20px;
 
-    padding:18px 8px;
+    padding:20px 8px;
 
-    border-bottom:1px solid #f5f7fa;
+    border-bottom:1px solid #edf2f7;
 
-    transition:.25s;
+    column-gap: 16px;
+
+    transition:
+        background .2s ease,
+        box-shadow .2s ease,
+        transform .2s ease;
 }
 
 .module-item:last-child{
@@ -47,7 +54,19 @@
 
     background:#f8fbff;
 
-    border-radius:12px;
+    transform:translateY(-1px);
+
+    box-shadow:0 4px 12px rgba(15,23,42,.05);
+}
+
+.module-content {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
 }
 
 /* -------------------------- */
@@ -55,15 +74,22 @@
 .module-name{
 
     font-weight:600;
+    font-size:15px;
 
     color:#0f172a;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .module-tests{
 
     color:#64748b;
 
-    font-weight:600;
+    font-size:13px;
+
+    font-weight:500;
 }
 
 /* -------------------------- */
@@ -81,7 +107,7 @@
 
     flex:1;
 
-    height:8px;
+    height:10px;
 
     background:#e2e8f0;
 
@@ -90,24 +116,25 @@
     overflow:hidden;
 }
 
-.progress-fill{
-
-    height:100%;
-
-    border-radius:999px;
-
-    background:linear-gradient(90deg,#22c55e,#16a34a);
+.progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
+    transition: width .35s ease;
 }
 
 .progress-value{
 
-    width:48px;
+    width:52px;
 
     text-align:right;
 
-    font-weight:700;
+    font-size:13px;
 
-    color:#0f172a;
+    font-weight:600;
+
+    color:#334155;
+
 }
 
 
@@ -119,9 +146,9 @@
 
     align-items:center;
 
-    min-width:32px;
+    min-width:28px;
 
-    height:28px;
+    height:24px;
 
     padding:0 10px;
 
@@ -132,6 +159,7 @@
     color:#dc2626;
 
     font-weight:700;
+    font-size:12px;
 }
 
 .passed-text{
@@ -142,9 +170,9 @@
 
     align-items:center;
 
-    min-width:32px;
+    min-width:28px;
 
-    height:28px;
+    height:24px;
 
     padding:0 10px;
 
@@ -155,4 +183,5 @@
     color:#16a34a;
 
     font-weight:700;
+    font-size:12px;
 }

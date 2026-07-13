@@ -13,12 +13,12 @@ export function renderModules(data) {
         container.innerHTML += `
 <div class="module-item">
 
-    <div class="module-name">
+    <div class="module-name" title="${module.name}">
         ${module.name}
     </div>
 
     <div class="module-tests">
-        ${stats.total}
+        ${stats.total} Tests
     </div>
 
     <div class="progress-wrapper">
@@ -26,8 +26,9 @@ export function renderModules(data) {
         <div class="progress-bar">
 
             <div class="progress-fill"
-                 style="width:${passRate}%">
-            </div>
+         style="width:${passRate}%"
+         aria-label="Pass Rate ${passRate}%">
+    </div>
 
         </div>
 
@@ -37,7 +38,7 @@ export function renderModules(data) {
 
     </div>
 
-    <div>
+    <div class="module-failed">
 
         <span class="${stats.failed ? 'failed-text' : 'passed-text'}">
 

@@ -98,49 +98,86 @@
 
                 <div class="summary-item">
 
-                    <span class="label">Tests</span>
+                    <div class="summary-header">
 
-                    <span class="value" id="totalTests">0</span>
+                        <div class="summary-icon total">
+                            <i class="fa-solid fa-list-check"></i>
+                            <span class="summary-label">Total Tests</span>
+                        </div>
 
-                </div>
 
-                <div class="summary-item">
 
-                    <span class="label">Passed</span>
+                    </div>
 
-                    <span class="value success" id="passedTests">0</span>
-
-                </div>
-
-                <div class="summary-item">
-
-                    <span class="label">Failed</span>
-
-                    <span class="value failed" id="failedTests">0</span>
+                    <span class="value total-value" id="totalTests">0</span>
 
                 </div>
 
                 <div class="summary-item">
 
-                    <span class="label">Broken</span>
+                    <div class="summary-header">
 
-                    <span class="value warning" id="brokenTests">0</span>
+                        <div class="summary-icon passed">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span class="label">Passed</span>
+                        </div>
+
+
+                    </div>
+
+                    <span class="value pass-value" id="passedTests">0</span>
 
                 </div>
 
                 <div class="summary-item">
 
-                    <span class="label">Skipped</span>
+                    <div class="summary-icon failed">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span class="summary-label">Failed</span>
+                    </div>
 
-                    <span class="value skipped" id="skippedTests">0</span>
+                    <span class="value fail-value" id="failedTests">0</span>
+
+
 
                 </div>
 
-                <div class="summary-item duration">
+                <div class="summary-item">
 
-                    <span class="label">Duration</span>
+                    <div class="summary-icon broken">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span class="summary-label">Broken</span>
+                    </div>
 
-                    <span class="value" id="duration">0s</span>
+                    <span class="value broken-value" id="brokenTests">0</span>
+
+
+
+                </div>
+
+                <div class="summary-item">
+
+                    <div class="summary-icon skipped">
+                        <i class="fa-solid fa-forward"></i>
+                        <span class="summary-label">Skipped</span>
+                    </div>
+
+                    <span class="value skipped-value" id="skippedTests">0</span>
+
+
+
+                </div>
+
+                <div class="summary-item">
+
+                    <div class="summary-icon duration">
+                        <i class="fa-solid fa-clock"></i>
+                        <span class="summary-label">Execution Time</span>
+                    </div>
+
+                    <span class="value duration-value" id="duration">0s</span>
+
+                    
 
                 </div>
 
@@ -153,23 +190,25 @@
             <div class="card module-card">
 
                 <div class="card-header">
-                    <h2>Module Overview</h2>
-                    <span>BDD Features</span>
+                    <h2>Module Overview (BDD Features)</h2>
                 </div>
 
-                <div class="module-list-header">
+                <div class="module-content">
 
-                    <span>Module</span>
+                    <div class="module-list-header">
 
-                    <span>Tests</span>
+                        <span>Module</span>
 
-                    <span>Pass Rate</span>
+                        <span>Tests</span>
 
-                    <span>Failed</span>
+                        <span>Pass Rate</span>
 
+                        <span>Failed</span>
+
+                    </div>
+
+                    <div id="moduleList"></div>
                 </div>
-
-                <div id="moduleList"></div>
 
             </div>
 
@@ -194,39 +233,32 @@
 
             </div>
 
+        </section>
 
-            <div class="filter-card">
+        <section class="dashboard-bottom">
 
+            <div class="card">
                 <div class="card-header">
-
-                    <h2>Filters</h2>
-
+                    <h3>Recent Failures</h3>
                 </div>
 
-                <div class="filter-group">
+                <div id="recentFailures"></div>
+            </div>
 
-                    <label>Environment</label>
-
-                    <select id="environmentFilter"></select>
-
+            <div class="card">
+                <div class="card-header">
+                    <h3>Top Slow Tests</h3>
                 </div>
 
-                <div class="filter-group">
+                <div id="slowTests"></div>
+            </div>
 
-                    <label>Browser</label>
-
-                    <select id="browserFilter"></select>
-
+            <div class="card">
+                <div class="card-header">
+                    <h3>Execution Details</h3>
                 </div>
 
-                <div class="filter-group">
-
-                    <label>Release</label>
-
-                    <select id="releaseFilter"></select>
-
-                </div>
-
+                <div id="environmentCard"></div>
             </div>
 
         </section>

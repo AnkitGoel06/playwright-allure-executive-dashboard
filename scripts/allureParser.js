@@ -5,13 +5,13 @@ class AllureParser {
 
     constructor() {
 
-        this.widgetsPath = path.join(__dirname, "..", "allure-report", "widgets");
+        this.reportPath = path.join(__dirname, "..", "allure-report");
 
     }
 
-    loadJson(fileName) {
+    loadJson(...parts) {
 
-        const file = path.join(this.widgetsPath, fileName);
+        const file = path.join(this.reportPath, ...parts);
 
         if (!fs.existsSync(file)) {
             throw new Error(`File not found: ${file}`);
@@ -22,23 +22,47 @@ class AllureParser {
     }
 
     getSummary() {
-        return this.loadJson("summary.json");
+        return this.loadJson("widgets", "summary.json");
     }
 
     getSuites() {
-        return this.loadJson("suites.json");
+        return this.loadJson("widgets", "suites.json");
     }
 
     getCategories() {
-        return this.loadJson("categories.json");
+        return this.loadJson("widgets", "categories.json");
     }
 
     getEnvironment() {
-        return this.loadJson("environment.json");
+        return this.loadJson("widgets", "environment.json");
     }
 
     getHistoryTrend() {
-        return this.loadJson("history-trend.json");
+        return this.loadJson("history", "history-trend.json");
+    }
+
+    getDurationTrend() {
+        return this.loadJson("history", "duration-trend.json");
+    }
+
+    getRetryTrend() {
+        return this.loadJson("history", "retry-trend.json");
+    }
+
+    getTestCases() {
+        const folder = path.join(__dirname, "..", "allure-report", "data", "test-cases");
+
+        if (!fs.existsSync(folder)) {
+            return [];
+        }
+
+        return fs.readdirSync(folder)
+            .filter(file => file.endsWith(".json"))
+            .map(file =>
+                JSON.parse(
+                    fs.readFileSync(path.join(folder, file), "utf8")
+                )
+            );
     }
 
 }

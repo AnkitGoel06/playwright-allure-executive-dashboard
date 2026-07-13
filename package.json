@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
 "scripts": {
+  "executor:generate": "node scripts/executorGenerator.js",
   "bddgen": "bddgen",
-  "test": "npm run bddgen && playwright test",
+  "test": "npm run bddgen && npm run executor:generate && playwright test",
   "test:headed": "npm run bddgen && playwright test --headed",
 
   "allure:generate": "node scripts/copyHistory.js && allure generate allure-results --clean -o allure-report",

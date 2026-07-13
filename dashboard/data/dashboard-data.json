@@ -1,11 +1,11 @@
 {
-    "generatedOn": "2026-07-12T08:33:43.882Z",
+    "generatedOn": "2026-07-12T15:33:35.337Z",
     "header": {
         "reportName": "Commerce Automation Report",
         "totalTests": 15,
         "passed": 8,
         "failed": 7,
-        "duration": 10222,
+        "duration": 13811,
         "environment": "QA",
         "browser": "Chromium",
         "release": "5.4",
@@ -23,20 +23,20 @@
             "total": 15
         },
         "time": {
-            "start": 1783835690045,
-            "stop": 1783835700267,
-            "duration": 10222,
-            "minDuration": 13,
-            "maxDuration": 3341,
-            "sumDuration": 15711
+            "start": 1783864604598,
+            "stop": 1783864618409,
+            "duration": 13811,
+            "minDuration": 12,
+            "maxDuration": 4004,
+            "sumDuration": 18877
         }
     },
     "suites": {
         "total": 5,
         "items": [
             {
-                "uid": "717c13d1cf04dd5d4cee3118f3127eb0",
-                "name": "Checkout",
+                "uid": "bb83abe765b23afdcc20d6bfef6662fd",
+                "name": "Offer",
                 "statistic": {
                     "failed": 2,
                     "broken": 0,
@@ -59,8 +59,8 @@
                 }
             },
             {
-                "uid": "bb83abe765b23afdcc20d6bfef6662fd",
-                "name": "Offer",
+                "uid": "717c13d1cf04dd5d4cee3118f3127eb0",
+                "name": "Checkout",
                 "statistic": {
                     "failed": 2,
                     "broken": 0,
@@ -127,6 +127,51 @@
     },
     "history": [
         {
+            "build": 4,
+            "label": "#4",
+            "total": 15,
+            "passed": 8,
+            "failed": 7,
+            "passRate": 53.3,
+            "duration": 0.2
+        },
+        {
+            "build": 3,
+            "label": "#3",
+            "total": 15,
+            "passed": 8,
+            "failed": 7,
+            "passRate": 53.3,
+            "duration": 0.2
+        },
+        {
+            "build": 2,
+            "label": "#2",
+            "total": 15,
+            "passed": 8,
+            "failed": 7,
+            "passRate": 53.3,
+            "duration": 0.2
+        },
+        {
+            "build": 1,
+            "label": "#1",
+            "total": 15,
+            "passed": 8,
+            "failed": 7,
+            "passRate": 53.3,
+            "duration": 0.2
+        },
+        {
+            "build": 1,
+            "label": "#1",
+            "total": 15,
+            "passed": 8,
+            "failed": 7,
+            "passRate": 53.3,
+            "duration": 0.2
+        },
+        {
             "build": 1,
             "label": "#1",
             "total": 15,
@@ -153,5 +198,17 @@
             "passRate": 53.3,
             "duration": 0.2
         }
-    ]
+    ],
+    "widgetData": {
+        "environment": {
+            "application": "Commerce Platform",
+            "environment": "QA",
+            "browser": "Chromium",
+            "release": "5.4",
+            "generatedOn": "2026-07-12T15:33:35.338Z",
+            "duration": "13.8 sec"
+        },
+        "topSlowTests": [],
+        "recentFailures": []
+    }
 }

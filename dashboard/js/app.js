@@ -1,12 +1,14 @@
 import DashboardService from "./services/dashboardService.js";
 
-import { renderHeader } from "./components/header.js";
+import { renderHeader } from "./sections/header.js";
 
-import { renderKPI } from "./components/kpi.js";
+import { renderKPI } from "./sections/kpi.js";
 
-import { renderModules } from "./components/modules.js";
+import { renderModules } from "./sections/modules.js";
 
-import { renderTrend } from "./components/trend.js";
+import { renderTrend } from "./sections/trend.js";
+
+import { renderEnvironment } from "./sections/environment.js";
 
 class DashboardApp {
 
@@ -23,6 +25,8 @@ class DashboardApp {
         renderModules(data);
 
         renderTrend(data);
+
+        renderEnvironment(data);
 
     }
 
