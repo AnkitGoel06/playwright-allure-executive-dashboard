@@ -1,0 +1,88 @@
+/* ======================================================
+   COMMON CARD
+====================================================== */
+
+.card{
+    background: var(--panel);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    border: 1px solid #edf2f7;
+    padding:24px;
+    transition:.25s ease;
+}
+
+.card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(15,23,42,.08);
+}
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:24px;
+}
+
+.card-header h2{
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+    color:#0f172a;
+}
+
+.card-header span{
+    font-size:13px;
+    color:#94a3b8;
+    font-weight:500;
+}
+
+.card-header{
+
+   display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-bottom:18px;
+
+    border-bottom:1px solid #edf2f7;
+
+    margin-bottom:22px;
+
+}
+
+.card-header select{
+
+    height:36px;
+
+    border:1px solid #dbe2ea;
+
+    border-radius:8px;
+
+    padding:0 10px;
+
+    font-size:13px;
+
+    background:white;
+
+}
+
+.card-header h2{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin:0;
+
+}
+
+.card-header span{
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
