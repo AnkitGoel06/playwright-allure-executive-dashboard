@@ -1,34 +1,32 @@
 {
-    "generatedOn": "2026-07-13T11:31:34.538Z",
+    "generatedOn": "2026-07-14T16:58:56.103Z",
     "header": {
         "reportName": "Commerce Automation Report",
-        "totalTests": 15,
-        "passed": 8,
-        "failed": 7,
-        "duration": 13562,
+        "totalTests": 30,
+        "passed": 16,
+        "failed": 14,
+        "duration": 5149426,
         "environment": "QA",
-        "browser": "Chromium",
-        "release": "5.4",
-        "application": "Commerce Platform"
+        "browser": "Chromium"
     },
     "summary": {
         "reportName": "Commerce Automation Report",
         "testRuns": [],
         "statistic": {
-            "failed": 7,
+            "failed": 14,
             "broken": 0,
             "skipped": 0,
-            "passed": 8,
+            "passed": 16,
             "unknown": 0,
-            "total": 15
+            "total": 30
         },
         "time": {
-            "start": 1783920285317,
-            "stop": 1783920298879,
-            "duration": 13562,
-            "minDuration": 21,
-            "maxDuration": 4853,
-            "sumDuration": 20358
+            "start": 1784042051366,
+            "stop": 1784047200792,
+            "duration": 5149426,
+            "minDuration": 10,
+            "maxDuration": 5302,
+            "sumDuration": 41735
         }
     },
     "suites": {
@@ -38,48 +36,48 @@
                 "uid": "bb83abe765b23afdcc20d6bfef6662fd",
                 "name": "Offer",
                 "statistic": {
-                    "failed": 2,
+                    "failed": 4,
                     "broken": 0,
                     "skipped": 0,
-                    "passed": 1,
+                    "passed": 2,
                     "unknown": 0,
-                    "total": 3
+                    "total": 6
                 }
             },
             {
                 "uid": "717c13d1cf04dd5d4cee3118f3127eb0",
                 "name": "Checkout",
                 "statistic": {
-                    "failed": 2,
+                    "failed": 4,
                     "broken": 0,
                     "skipped": 0,
-                    "passed": 1,
+                    "passed": 2,
                     "unknown": 0,
-                    "total": 3
+                    "total": 6
                 }
             },
             {
                 "uid": "23c65f0db8cd2111e631a3d448e92b9a",
                 "name": "Quote",
                 "statistic": {
-                    "failed": 2,
+                    "failed": 4,
                     "broken": 0,
                     "skipped": 0,
-                    "passed": 1,
+                    "passed": 2,
                     "unknown": 0,
-                    "total": 3
+                    "total": 6
                 }
             },
             {
                 "uid": "be3151f8b882d0c00c9fb35012f49657",
                 "name": "Search",
                 "statistic": {
-                    "failed": 1,
+                    "failed": 2,
                     "broken": 0,
                     "skipped": 0,
-                    "passed": 2,
+                    "passed": 4,
                     "unknown": 0,
-                    "total": 3
+                    "total": 6
                 }
             },
             {
@@ -89,43 +87,67 @@
                     "failed": 0,
                     "broken": 0,
                     "skipped": 0,
-                    "passed": 3,
+                    "passed": 6,
                     "unknown": 0,
-                    "total": 3
+                    "total": 6
                 }
             }
         ]
     },
     "categories": {
-        "total": 2,
+        "total": 1,
         "items": [
             {
-                "uid": "8ea1c82e7dc88ffe4a2822fef5600e76",
-                "name": "Assertion Failure",
+                "uid": "8fb3a91ba5aaf9de24cc8a92edc82b5d",
+                "name": "Product defects",
                 "statistic": {
-                    "failed": 4,
+                    "failed": 14,
                     "broken": 0,
                     "skipped": 0,
                     "passed": 0,
                     "unknown": 0,
-                    "total": 4
-                }
-            },
-            {
-                "uid": "c022c2f5afc0a1e0fef6fd9ed5a3a28a",
-                "name": "Application Bug",
-                "statistic": {
-                    "failed": 3,
-                    "broken": 0,
-                    "skipped": 0,
-                    "passed": 0,
-                    "unknown": 0,
-                    "total": 3
+                    "total": 14
                 }
             }
         ]
     },
     "history": [
+        {
+            "build": 9,
+            "label": "#9",
+            "total": 30,
+            "passed": 16,
+            "failed": 14,
+            "passRate": 53.3,
+            "duration": 85.8
+        },
+        {
+            "build": 8,
+            "label": "#8",
+            "total": 15,
+            "passed": 8,
+            "failed": 7,
+            "passRate": 53.3,
+            "duration": 0.2
+        },
+        {
+            "build": 7,
+            "label": "#7",
+            "total": 15,
+            "passed": 8,
+            "failed": 7,
+            "passRate": 53.3,
+            "duration": 0.2
+        },
+        {
+            "build": 6,
+            "label": "#6",
+            "total": 15,
+            "passed": 8,
+            "failed": 7,
+            "passRate": 53.3,
+            "duration": 0.3
+        },
         {
             "build": 5,
             "label": "#5",
@@ -210,14 +232,85 @@
     ],
     "widgetData": {
         "environment": {
-            "application": "Commerce Platform",
+            "application": "-",
             "environment": "QA",
             "browser": "Chromium",
-            "release": "5.4",
-            "generatedOn": "2026-07-13T11:31:34.540Z",
-            "duration": "13.6 sec"
+            "release": "-",
+            "generatedOn": "2026-07-14T16:58:56.104Z",
+            "duration": "5149.4 sec"
         },
         "topSlowTests": [],
-        "recentFailures": []
+        "recentFailures": [
+            {
+                "severity": "Normal",
+                "scenario": "Out Of Stock Seller",
+                "feature": "buyBox",
+                "module": "Offer",
+                "duration": "3.9 sec",
+                "status": "Failed",
+                "error": "Error: Seller Service Unavailable",
+                "errorLocation": "offer.steps.ts:28",
+                "tags": [
+                    "Offer",
+                    "Regression"
+                ]
+            },
+            {
+                "severity": "Normal",
+                "scenario": "Invalid Search",
+                "feature": "productSearch",
+                "module": "Search",
+                "duration": "2.5 sec",
+                "status": "Failed",
+                "error": "Error: expect(received).toBeTruthy() ",
+                "errorLocation": "search.steps.ts:28",
+                "tags": [
+                    "Negative",
+                    "Search"
+                ]
+            },
+            {
+                "severity": "Normal",
+                "scenario": "Seller Selection",
+                "feature": "buyBox",
+                "module": "Offer",
+                "duration": "2.9 sec",
+                "status": "Failed",
+                "error": "Error: expect(received).toBe(expected) // Object.is equality ",
+                "errorLocation": "offer.steps.ts:24",
+                "tags": [
+                    "Offer",
+                    "Regression"
+                ]
+            },
+            {
+                "severity": "Normal",
+                "scenario": "Payment Gateway Timeout",
+                "feature": "payment",
+                "module": "Checkout",
+                "duration": "0.1 sec",
+                "status": "Failed",
+                "error": "Error: Timeout while waiting for payment gateway",
+                "errorLocation": "checkout.steps.ts:27",
+                "tags": [
+                    "Checkout",
+                    "Regression"
+                ]
+            },
+            {
+                "severity": "Normal",
+                "scenario": "Cancel Quote",
+                "feature": "createQuote",
+                "module": "Quote",
+                "duration": "0.1 sec",
+                "status": "Failed",
+                "error": "Error: Cancellation feature not implemented",
+                "errorLocation": "quote.steps.ts:27",
+                "tags": [
+                    "Quote",
+                    "Skip"
+                ]
+            }
+        ]
     }
 }

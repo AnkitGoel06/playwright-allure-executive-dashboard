@@ -1,1 +1,1 @@
-{"reportName":"Commerce Automation Report","testRuns":[],"statistic":{"failed":7,"broken":0,"skipped":0,"passed":8,"unknown":0,"total":15},"time":{"start":1783920285317,"stop":1783920298879,"duration":13562,"minDuration":21,"maxDuration":4853,"sumDuration":20358}}
+{"reportName":"Commerce Automation Report","testRuns":[],"statistic":{"failed":14,"broken":0,"skipped":0,"passed":16,"unknown":0,"total":30},"time":{"start":1784042051366,"stop":1784047200792,"duration":5149426,"minDuration":10,"maxDuration":5302,"sumDuration":41735}}

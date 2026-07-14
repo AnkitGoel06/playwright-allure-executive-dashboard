@@ -10,6 +10,8 @@ import { renderTrend } from "./sections/trend.js";
 
 import { renderEnvironment } from "./sections/environment.js";
 
+import { renderRecentFailures } from "./sections/recentFailures.js";
+
 class DashboardApp {
 
     async initialize() {
@@ -27,6 +29,8 @@ class DashboardApp {
         renderTrend(data);
 
         renderEnvironment(data);
+
+        renderRecentFailures(data);
 
     }
 

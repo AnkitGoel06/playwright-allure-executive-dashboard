@@ -2,7 +2,7 @@ export function renderEnvironment(data) {
 
     const env = data.widgetData.environment;
 
-    document.getElementById("environmentCard").innerHTML = `
+    document.getElementById("executionDetails").innerHTML = `
 
         <div class="env-grid">
 

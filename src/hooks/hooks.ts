@@ -1,5 +1,5 @@
 import { createBdd  } from 'playwright-bdd';
-import { AllureUtil } from '../utils/AllureUtil';
+import { AllureUtil } from '../utils/allureUtil';
 import * as allure from 'allure-js-commons';
 
 const { Before, After } = createBdd();

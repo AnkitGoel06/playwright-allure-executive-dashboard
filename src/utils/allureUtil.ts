@@ -40,6 +40,10 @@ export class AllureUtil {
         await allure.label("Country", data.country);
 
         await allure.label("Layer", data.layer);
+
+        await allure.label("Application", "UCE Model 2 Automation");
+
+        await allure.label("Release", "0.1.0");
     }
 
 }
