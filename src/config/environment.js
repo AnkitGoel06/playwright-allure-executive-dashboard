@@ -6,6 +6,6 @@ module.exports = {
 
     browser: process.env.BROWSER || "Chromium",
 
-    release: process.env.RELEASE || "5.4"
+    release: process.env.RELEASE || "0.1"
 
 };

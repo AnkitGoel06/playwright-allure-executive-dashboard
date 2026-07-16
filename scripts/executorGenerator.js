@@ -11,6 +11,11 @@ class ExecutorGenerator {
 
         const buildNumber = resolver.getBuildNumber();
 
+        const resultsDir = path.join(__dirname, "..", "allure-results");
+
+        // Create directory if it doesn't exist
+        fs.mkdirSync(resultsDir, { recursive: true });
+
         const executor = {
 
             name: process.env.CI ? "CI Pipeline" : "Local",
@@ -21,7 +26,7 @@ class ExecutorGenerator {
 
             buildName: `Build #${buildNumber}`,
 
-            reportName: "Commerce Automation Report",
+            reportName: "UCE Model 2 Automation Report",
 
             reportUrl: "http://localhost"
 
@@ -30,9 +35,7 @@ class ExecutorGenerator {
         fs.writeFileSync(
 
             path.join(
-                __dirname,
-                "..",
-                "allure-results",
+                resultsDir,
                 "executor.json"
             ),
 

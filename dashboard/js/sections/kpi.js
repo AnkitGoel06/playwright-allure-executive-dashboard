@@ -2,25 +2,64 @@ import { formatDuration } from "../utils/formatter.js";
 
 export function renderKPI(data) {
 
-    const stats = data.summary.statistic;
+    const cards = data.summaryCards;
 
-    document.getElementById("totalTests").textContent = stats.total;
+    document.getElementById("totalTests").textContent =
+        cards.total.value;
 
-    document.getElementById("passedTests").textContent = stats.passed;
+    document.getElementById("totalTestsDelta").textContent =
+        cards.total.delta == null
+            ? ""
+            : `${cards.total.delta >= 0 ? "↑" : "↓"} ${Math.abs(cards.total.delta)} vs last run`;
 
-    document.getElementById("failedTests").textContent = stats.failed;
+    document.getElementById("passedTests").textContent =
+        cards.passed.value;
 
-    document.getElementById("brokenTests").textContent = stats.broken;
+    document.getElementById("passedPercentage").textContent =
+        `${cards.passed.percentage}%`;
 
-    document.getElementById("skippedTests").textContent = stats.skipped;
+    document.getElementById("failedTests").textContent =
+        cards.failed.value;
+
+    document.getElementById("failedPercentage").textContent =
+        `${cards.failed.percentage}%`;
+
+    document.getElementById("brokenTests").textContent =
+        cards.broken.value;
+
+    document.getElementById("brokenPercentage").textContent =
+        `${cards.broken.percentage}%`;
+
+    document.getElementById("skippedTests").textContent =
+        cards.skipped.value;
+
+    document.getElementById("skippedPercentage").textContent =
+        `${cards.skipped.percentage}%`;
 
     document.getElementById("duration").textContent =
-        formatDuration(data.summary.time.duration);
+        formatDuration(cards.duration.value);
 
-    const passRate =
-        ((stats.passed / stats.total) * 100).toFixed(1);
+    document.getElementById("durationDelta").textContent =
+        cards.duration.delta == null
+            ? ""
+            : `${cards.duration.delta >= 0 ? "↑" : "↓"} ${formatDuration(Math.abs(cards.duration.delta))} vs last run`;
 
-    document.getElementById("passRate").textContent =
-        `${passRate}%`;
+    const gauge = document.getElementById("passRate");
+    const passRate = cards.passRate.value;
+
+    const arcLength = 125.66;
+
+    // Calculate dashoffset (100% pass rate = 0 offset, 0% pass rate = full length offset)
+    const offset = arcLength - (passRate / 100) * arcLength;
+
+    // Update the green path stroke
+    document.getElementById("gaugeProgress").style.strokeDashoffset = offset;
+
+    gauge.querySelector("span").textContent = `${passRate}%`;
+
+    document.getElementById("passRateChange").textContent =
+        cards.passRate.delta == null
+            ? ""
+            : `${cards.passRate.delta >= 0 ? "↑" : "↓"} ${Math.abs(cards.passRate.delta)}% vs last run`;
 
 }

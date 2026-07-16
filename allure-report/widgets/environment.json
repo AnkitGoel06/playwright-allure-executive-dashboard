@@ -1,1 +1,1 @@
-[{"values":["QA"],"name":"Environment"},{"values":["Chromium"],"name":"Browser"},{"values":["US"],"name":"Country"},{"values":["UI"],"name":"Layer"},{"values":["Sprint-1"],"name":"Sprint"},{"values":["Product Discovery"],"name":"Journey"},{"values":["Version=v24.14.1"],"name":"Node"},{"values":["Type=Local"],"name":"Run"}]
+[{"values":["UCE Model 2"],"name":"Application"},{"values":["QA"],"name":"Environment"},{"values":["Chromium"],"name":"Browser"},{"values":["0.1"],"name":"Release"}]

@@ -1,83 +1,97 @@
 {
-    "generatedOn": "2026-07-14T16:58:56.103Z",
+    "generatedOn": "2026-07-16T06:28:42.503Z",
     "header": {
-        "reportName": "Commerce Automation Report",
-        "totalTests": 30,
-        "passed": 16,
-        "failed": 14,
-        "duration": 5149426,
+        "reportName": "UCE Model 2 Automation Report",
+        "totalTests": 17,
+        "passed": 10,
+        "failed": 7,
+        "duration": 18948,
         "environment": "QA",
-        "browser": "Chromium"
+        "browser": "Chromium",
+        "release": "0.1",
+        "application": "UCE Model 2"
     },
-    "summary": {
-        "reportName": "Commerce Automation Report",
-        "testRuns": [],
-        "statistic": {
-            "failed": 14,
-            "broken": 0,
-            "skipped": 0,
-            "passed": 16,
-            "unknown": 0,
-            "total": 30
+    "summaryCards": {
+        "total": {
+            "value": 17,
+            "delta": 1
         },
-        "time": {
-            "start": 1784042051366,
-            "stop": 1784047200792,
-            "duration": 5149426,
-            "minDuration": 10,
-            "maxDuration": 5302,
-            "sumDuration": 41735
+        "passed": {
+            "value": 10,
+            "percentage": 58.8,
+            "delta": 1
+        },
+        "failed": {
+            "value": 7,
+            "percentage": 41.2,
+            "delta": 0
+        },
+        "broken": {
+            "value": 0,
+            "percentage": 0
+        },
+        "skipped": {
+            "value": 0,
+            "percentage": 0
+        },
+        "duration": {
+            "value": 19,
+            "delta": 1
+        },
+        "passRate": {
+            "value": 58.8,
+            "delta": 2.5
         }
     },
     "suites": {
         "total": 5,
         "items": [
             {
-                "uid": "bb83abe765b23afdcc20d6bfef6662fd",
-                "name": "Offer",
-                "statistic": {
-                    "failed": 4,
-                    "broken": 0,
-                    "skipped": 0,
-                    "passed": 2,
-                    "unknown": 0,
-                    "total": 6
-                }
-            },
-            {
                 "uid": "717c13d1cf04dd5d4cee3118f3127eb0",
                 "name": "Checkout",
                 "statistic": {
-                    "failed": 4,
+                    "failed": 2,
                     "broken": 0,
                     "skipped": 0,
                     "passed": 2,
                     "unknown": 0,
-                    "total": 6
+                    "total": 4
+                }
+            },
+            {
+                "uid": "bb83abe765b23afdcc20d6bfef6662fd",
+                "name": "Offer",
+                "statistic": {
+                    "failed": 2,
+                    "broken": 0,
+                    "skipped": 0,
+                    "passed": 1,
+                    "unknown": 0,
+                    "total": 3
                 }
             },
             {
                 "uid": "23c65f0db8cd2111e631a3d448e92b9a",
                 "name": "Quote",
                 "statistic": {
-                    "failed": 4,
+                    "failed": 2,
                     "broken": 0,
                     "skipped": 0,
-                    "passed": 2,
+                    "passed": 1,
                     "unknown": 0,
-                    "total": 6
+                    "total": 3
                 }
             },
             {
                 "uid": "be3151f8b882d0c00c9fb35012f49657",
                 "name": "Search",
                 "statistic": {
-                    "failed": 2,
+                    "failed": 1,
                     "broken": 0,
                     "skipped": 0,
-                    "passed": 4,
+                    "passed": 2,
                     "unknown": 0,
-                    "total": 6
+                    "total": 3
                 }
             },
             {
@@ -87,9 +101,9 @@
                     "failed": 0,
                     "broken": 0,
                     "skipped": 0,
-                    "passed": 6,
+                    "passed": 4,
                     "unknown": 0,
-                    "total": 6
+                    "total": 4
                 }
             }
         ]
@@ -101,143 +115,53 @@
                 "uid": "8fb3a91ba5aaf9de24cc8a92edc82b5d",
                 "name": "Product defects",
                 "statistic": {
-                    "failed": 14,
+                    "failed": 7,
                     "broken": 0,
                     "skipped": 0,
                     "passed": 0,
                     "unknown": 0,
-                    "total": 14
+                    "total": 7
                 }
             }
         ]
     },
     "history": [
         {
-            "build": 9,
-            "label": "#9",
-            "total": 30,
-            "passed": 16,
-            "failed": 14,
-            "passRate": 53.3,
-            "duration": 85.8
-        },
-        {
-            "build": 8,
-            "label": "#8",
-            "total": 15,
-            "passed": 8,
+            "build": 3,
+            "label": "#3",
+            "total": 17,
+            "passed": 10,
             "failed": 7,
-            "passRate": 53.3,
-            "duration": 0.2
+            "passRate": 58.8,
+            "duration": 0.3
         },
         {
-            "build": 7,
-            "label": "#7",
-            "total": 15,
-            "passed": 8,
+            "build": 2,
+            "label": "#2",
+            "total": 16,
+            "passed": 9,
             "failed": 7,
-            "passRate": 53.3,
-            "duration": 0.2
+            "passRate": 56.3,
+            "duration": 0.3
         },
         {
-            "build": 6,
-            "label": "#6",
+            "build": 1,
+            "label": "#1",
             "total": 15,
             "passed": 8,
             "failed": 7,
             "passRate": 53.3,
             "duration": 0.3
-        },
-        {
-            "build": 5,
-            "label": "#5",
-            "total": 15,
-            "passed": 8,
-            "failed": 7,
-            "passRate": 53.3,
-            "duration": 0.2
-        },
-        {
-            "build": 4,
-            "label": "#4",
-            "total": 15,
-            "passed": 8,
-            "failed": 7,
-            "passRate": 53.3,
-            "duration": 0.2
-        },
-        {
-            "build": 3,
-            "label": "#3",
-            "total": 15,
-            "passed": 8,
-            "failed": 7,
-            "passRate": 53.3,
-            "duration": 0.2
-        },
-        {
-            "build": 2,
-            "label": "#2",
-            "total": 15,
-            "passed": 8,
-            "failed": 7,
-            "passRate": 53.3,
-            "duration": 0.2
-        },
-        {
-            "build": 1,
-            "label": "#1",
-            "total": 15,
-            "passed": 8,
-            "failed": 7,
-            "passRate": 53.3,
-            "duration": 0.2
-        },
-        {
-            "build": 1,
-            "label": "#1",
-            "total": 15,
-            "passed": 8,
-            "failed": 7,
-            "passRate": 53.3,
-            "duration": 0.2
-        },
-        {
-            "build": 1,
-            "label": "#1",
-            "total": 15,
-            "passed": 8,
-            "failed": 7,
-            "passRate": 53.3,
-            "duration": 0.2
-        },
-        {
-            "build": 1,
-            "label": "#1",
-            "total": 15,
-            "passed": 8,
-            "failed": 7,
-            "passRate": 53.3,
-            "duration": 0.2
-        },
-        {
-            "build": 1,
-            "label": "#1",
-            "total": 15,
-            "passed": 8,
-            "failed": 7,
-            "passRate": 53.3,
-            "duration": 0.2
         }
     ],
     "widgetData": {
         "environment": {
-            "application": "-",
+            "application": "UCE Model 2",
             "environment": "QA",
             "browser": "Chromium",
-            "release": "-",
-            "generatedOn": "2026-07-14T16:58:56.104Z",
-            "duration": "5149.4 sec"
+            "release": "0.1",
+            "generatedOn": "2026-07-16T06:28:42.504Z",
+            "duration": "18.9 sec"
         },
         "topSlowTests": [],
         "recentFailures": [
@@ -246,7 +170,7 @@
                 "scenario": "Out Of Stock Seller",
                 "feature": "buyBox",
                 "module": "Offer",
-                "duration": "3.9 sec",
+                "duration": "2.7 sec",
                 "status": "Failed",
                 "error": "Error: Seller Service Unavailable",
                 "errorLocation": "offer.steps.ts:28",
@@ -274,7 +198,7 @@
                 "scenario": "Seller Selection",
                 "feature": "buyBox",
                 "module": "Offer",
-                "duration": "2.9 sec",
+                "duration": "4.5 sec",
                 "status": "Failed",
                 "error": "Error: expect(received).toBe(expected) // Object.is equality ",
                 "errorLocation": "offer.steps.ts:24",

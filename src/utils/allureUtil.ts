@@ -15,6 +15,7 @@ export class AllureUtil {
         browser: string;
         country: string;
         layer: string;
+        application: string;
     }) {
 
         await allure.epic(data.epic);
@@ -41,7 +42,7 @@ export class AllureUtil {
 
         await allure.label("Layer", data.layer);
 
-        await allure.label("Application", "UCE Model 2 Automation");
+        await allure.label("Application", data.application);
 
         await allure.label("Release", "0.1.0");
     }

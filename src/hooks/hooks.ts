@@ -10,7 +10,7 @@ Before({ tags: '@Search' }, async () => {
         epic: 'Commerce',
         feature: 'Search',
         story: 'Product Search',
-        owner: 'Commerce QA',
+        owner: 'UCE2 QA',
         severity: 'critical',
         module: 'Search',
         sprint: 'Sprint-1',
@@ -18,7 +18,8 @@ Before({ tags: '@Search' }, async () => {
         environment: 'QA',
         browser: 'Chromium',
         country: 'US',
-        layer: 'UI'
+        layer: 'UI',
+        application: 'UCE Model 2',
     });
 
 });

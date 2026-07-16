@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>QA Insight Dashboard</title>
+    <title>Executive Dashboard - UCE2</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +18,6 @@
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
-
-
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/kpi.css">
@@ -88,7 +86,14 @@
                 <div class="pass-rate-body">
 
                     <div class="gauge-placeholder" id="passRate">
-                        0%
+                        <svg width="150" height="75" viewBox="0 0 100 50">
+                            <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#e5e7eb" stroke-width="10"
+                                stroke-linecap="round" />
+                            <path id="gaugeProgress" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#22c55e"
+                                stroke-width="10" stroke-linecap="round" stroke-dasharray="125.66"
+                                stroke-dashoffset="125.66" />
+                        </svg>
+                        <span>0%</span>
                     </div>
 
                     <div class="pass-change" id="passRateChange">
@@ -115,6 +120,7 @@
                     </div>
 
                     <span class="value total-value" id="totalTests">0</span>
+                    <span class="summary-subtext" id="totalTestsDelta"></span>
 
                 </div>
 
@@ -131,6 +137,7 @@
                     </div>
 
                     <span class="value pass-value" id="passedTests">0</span>
+                    <span class="summary-subtext" id="passedPercentage"></span>
 
                 </div>
 
@@ -148,7 +155,7 @@
                     </div>
 
                     <span class="value fail-value" id="failedTests">0</span>
-
+                    <span class="summary-subtext" id="failedPercentage"></span>
 
 
                 </div>
@@ -167,7 +174,7 @@
                     </div>
 
                     <span class="value broken-value" id="brokenTests">0</span>
-
+                    <span class="summary-subtext" id="brokenPercentage"></span>
 
 
                 </div>
@@ -186,7 +193,7 @@
                     </div>
 
                     <span class="value skipped-value" id="skippedTests">0</span>
-
+                    <span class="summary-subtext" id="skippedPercentage"></span>
 
 
                 </div>
@@ -205,7 +212,7 @@
                     </div>
 
                     <span class="value duration-value" id="duration">0s</span>
-
+                    <span class="summary-subtext" id="durationDelta"></span>
 
 
                 </div>

@@ -3,33 +3,33 @@ const path = require("path");
 
 const config = require("../src/config/environment");
 
-const environment = [
+const environment = {
 
-    {
-        name: "Application",
-        values: [config.application]
-    },
+    Application: config.application,
 
-    {
-        name: "Environment",
-        values: [config.environment]
-    },
+    Environment: config.environment,
 
-    {
-        name: "Browser",
-        values: [config.browser]
-    },
+    Browser: config.browser,
 
-    {
-        name: "Release",
-        values: [config.release]
-    }
+    Release: config.release
 
-];
+};
+
+const environmentProperties = Object.entries(environment)
+    .map(([key, value]) => `${key}=${value}`)
+    .join("\n");
+
+const resultsDir = path.join(__dirname, "..", "allure-results");
 
 fs.writeFileSync(
-    path.join(__dirname, "..", "allure-results", "environment.json"),
-    JSON.stringify(environment, null, 4)
+    path.join(resultsDir, "environment.properties"),
+    `${environmentProperties}\n`
 );
+
+const legacyJsonPath = path.join(resultsDir, "environment.json");
+
+if (fs.existsSync(legacyJsonPath)) {
+    fs.rmSync(legacyJsonPath, { force: true });
+}
 
 console.log("Environment file generated.");

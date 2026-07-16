@@ -3,21 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
-  "executor:generate": "node scripts/executorGenerator.js",
-  "bddgen": "bddgen",
-  "environment:generate": "node scripts/environmentGenerator.js",
-  "test": "npm run bddgen && npm run executor:generate && playwright test",
-  "test:headed": "npm run bddgen && playwright test --headed",
-
-  "allure:generate": "node scripts/copyHistory.js && npm run environment:generate &&allure generate allure-results --clean -o allure-report",
-
-  "allure:open": "allure open allure-report",
-
-  "allure:serve": "allure serve allure-results",
-
-  "dashboard:generate": "node scripts/dashboardGenerator.js"
-},
+  "scripts": {
+    "allure:clean": "if exist allure-results rmdir /s /q allure-results & mkdir allure-results",
+    "allure:history:restore": "if exist allure-history\\history xcopy /E /I /Y allure-history\\history allure-results\\history",
+    "executor:generate": "node scripts/executorGenerator.js",
+    "dashboard:generate": "node scripts/dashboardGenerator.js",
+    "bddgen": "bddgen",
+    "environment:generate": "node scripts/environmentGenerator.js",
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report && npm run dashboard:generate",
+    "allure:open": "npx allure open allure-report",
+    "allure:serve": "npx allure serve allure-results",
+    "test": "npm run allure:clean && npm run allure:history:restore && npm run environment:generate && npm run bddgen && npm run executor:generate && playwright test",
+    "allure:history:save": "if exist allure-report\\history (rimraf allure-history\\history && xcopy /E /I /Y allure-report\\history allure-history\\history)",
+    "report": "npm run allure:generate && npm run allure:history:save",
+    "test:report": "npm run test && echo TEST_FINISHED && npm run report && echo REPORT_FINISHED"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,8 +25,11 @@
     "@cucumber/cucumber": "^13.0.0",
     "@playwright/test": "^1.61.1",
     "@types/node": "^26.1.1",
+    "allure-commandline": "^2.43.0",
     "allure-js-commons": "^3.10.2",
     "allure-playwright": "^3.10.2",
-    "playwright-bdd": "^9.2.0"
+    "cpy-cli": "^7.0.0",
+    "playwright-bdd": "^9.2.0",
+    "rimraf": "^6.1.3"
   }
 }

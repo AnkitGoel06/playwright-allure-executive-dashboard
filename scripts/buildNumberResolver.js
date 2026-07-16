@@ -31,7 +31,7 @@ class BuildNumberResolver {
         const historyFile = path.join(
             __dirname,
             "..",
-            "allure-report",
+            "allure-history",
             "history",
             "history-trend.json"
         );

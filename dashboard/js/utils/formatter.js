@@ -1,11 +1,15 @@
-export function formatDuration(ms) {
+export function formatDuration(seconds) {
 
-    const totalSeconds = Math.floor(ms / 1000);
+    const h = Math.floor(seconds / 3600);
 
-    const minutes = Math.floor(totalSeconds / 60);
+    const m = Math.floor((seconds % 3600) / 60);
 
-    const seconds = totalSeconds % 60;
+    const s = seconds % 60;
 
-    return `${minutes}m ${seconds}s`;
+    if (h > 0) {
+        return `${h}h ${m}m ${s}s`;
+    }
+
+    return `${m}m ${s}s`;
 
 }

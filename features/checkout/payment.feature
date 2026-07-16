@@ -7,6 +7,12 @@ Feature: Checkout
     When user performs guest checkout
     Then order confirmation should be displayed
 
+  @Smoke
+  Scenario: Private Checkout
+    Given user has items in cart
+    When user performs guest checkout
+    Then order confirmation should be displayed
+
   @Negative
   Scenario: Invalid Coupon
     Given user has items in cart

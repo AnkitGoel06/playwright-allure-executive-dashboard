@@ -13,6 +13,12 @@ Feature: Login
     When user enters invalid credentials
     Then login error should be displayed
 
+  @Negative
+  Scenario: Invalid username
+    Given user opens login page
+    When user enters invalid credentials
+    Then login error should be displayed
+
   @Skip
   Scenario: Forgot Password
     Given user opens login page

@@ -14,12 +14,32 @@ const history = parser.getHistoryTrend();
 const durationHistory = parser.getDurationTrend();
 const widgetBuilder = new WidgetBuilder(parser);
 
+const previousRun = history.length > 1 ? history[1] : null;
+
 const durationMap = new Map(
     durationHistory.map(item => [
         item.buildOrder,
         Number((item.data.duration / 60000).toFixed(1))
     ])
 );
+
+const total = summary.statistic.total;
+const passed = summary.statistic.passed;
+const failed = summary.statistic.failed;
+const broken = summary.statistic.broken;
+const skipped = summary.statistic.skipped;
+
+const passRate = Number(((passed / total) * 100).toFixed(1));
+
+const currentDuration =
+    Number((summary.time.duration / 1000).toFixed(0));
+
+const previousDuration =
+    previousRun
+        ? Math.round(
+            (durationMap.get(previousRun.buildOrder) ?? 0) * 60
+        )
+        : 0;
 
 const dashboard = {
     generatedOn: new Date().toISOString(),
@@ -40,7 +60,60 @@ const dashboard = {
         application: environment.find(x => x.name === "Application")?.values[0]
     },
 
-    summary,
+    summaryCards: {
+
+        total: {
+            value: total,
+            delta: previousRun
+                ? total - previousRun.data.total
+                : null
+        },
+
+        passed: {
+            value: passed,
+            percentage: passRate,
+            delta: previousRun
+                ? passed - previousRun.data.passed
+                : null
+        },
+
+        failed: {
+            value: failed,
+            percentage: Number(((failed / total) * 100).toFixed(1)),
+            delta: previousRun
+                ? failed - previousRun.data.failed
+                : null
+        },
+
+        broken: {
+            value: broken,
+            percentage: Number(((broken / total) * 100).toFixed(1))
+        },
+
+        skipped: {
+            value: skipped,
+            percentage: Number(((skipped / total) * 100).toFixed(1))
+        },
+
+        duration: {
+            value: currentDuration,
+            delta: previousDuration
+                ? currentDuration - previousDuration
+                : null
+        },
+
+        passRate: {
+            value: passRate,
+            delta: previousRun
+                ? Number((
+                    passRate -
+                    (previousRun.data.passed /
+                        previousRun.data.total) * 100
+                ).toFixed(1))
+                : null
+        }
+
+    },
 
     suites,
 
