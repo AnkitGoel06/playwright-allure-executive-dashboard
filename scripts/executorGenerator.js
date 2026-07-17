@@ -26,7 +26,7 @@ class ExecutorGenerator {
 
             buildName: `Build #${buildNumber}`,
 
-            reportName: "UCE Model 2 Automation Report",
+            reportName: "Executive Dashboard - UCE2",
 
             reportUrl: "http://localhost"
 

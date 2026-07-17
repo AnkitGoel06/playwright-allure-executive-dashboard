@@ -15,8 +15,11 @@
     "allure:serve": "npx allure serve allure-results",
     "test": "npm run allure:clean && npm run allure:history:restore && npm run environment:generate && npm run bddgen && npm run executor:generate && playwright test",
     "allure:history:save": "if exist allure-report\\history (rimraf allure-history\\history && xcopy /E /I /Y allure-report\\history allure-history\\history)",
-    "report": "npm run allure:generate && npm run allure:history:save",
-    "test:report": "npm run test && echo TEST_FINISHED && npm run report && echo REPORT_FINISHED"
+    "report": "npm run allure:generate --single-file allure-results -o reports && npm run allure:history:save",
+    "test:report": "npm run test && echo TEST_FINISHED && npm run report && echo REPORT_FINISHED",
+    "dashboard:build": "node scripts/buildDashboard.js",
+    "dashboard:standalone": "node scripts/generateStandaloneReport.js",
+    "allure:generate:single": "npx allure generate allure-results --single-file --clean -o reports\\standaloneAllure-report"
   },
   "keywords": [],
   "author": "",
@@ -29,7 +32,11 @@
     "allure-js-commons": "^3.10.2",
     "allure-playwright": "^3.10.2",
     "cpy-cli": "^7.0.0",
+    "esbuild": "^0.28.1",
     "playwright-bdd": "^9.2.0",
     "rimraf": "^6.1.3"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1"
   }
 }

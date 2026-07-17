@@ -12,6 +12,8 @@ import { renderEnvironment } from "./sections/environment.js";
 
 import { renderRecentFailures } from "./sections/recentFailures.js";
 
+import { initializeOpenAllure } from "./sections/openAllure.js";
+
 class DashboardApp {
 
     async initialize() {
@@ -31,6 +33,8 @@ class DashboardApp {
         renderEnvironment(data);
 
         renderRecentFailures(data);
+
+        initializeOpenAllure();
 
     }
 

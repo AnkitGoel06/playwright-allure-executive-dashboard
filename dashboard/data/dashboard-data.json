@@ -1,11 +1,11 @@
 {
-    "generatedOn": "2026-07-16T06:28:42.503Z",
+    "generatedOn": "2026-07-16T13:06:23.788Z",
     "header": {
         "reportName": "UCE Model 2 Automation Report",
-        "totalTests": 17,
+        "totalTests": 19,
         "passed": 10,
-        "failed": 7,
-        "duration": 18948,
+        "failed": 9,
+        "duration": 24102,
         "environment": "QA",
         "browser": "Chromium",
         "release": "0.1",
@@ -13,17 +13,17 @@
     },
     "summaryCards": {
         "total": {
-            "value": 17,
-            "delta": 1
+            "value": 19,
+            "delta": 0
         },
         "passed": {
             "value": 10,
-            "percentage": 58.8,
-            "delta": 1
+            "percentage": 52.6,
+            "delta": 0
         },
         "failed": {
-            "value": 7,
-            "percentage": 41.2,
+            "value": 9,
+            "percentage": 47.4,
             "delta": 0
         },
         "broken": {
@@ -35,17 +35,41 @@
             "percentage": 0
         },
         "duration": {
-            "value": 19,
-            "delta": 1
+            "value": 24,
+            "delta": 0
         },
         "passRate": {
-            "value": 58.8,
-            "delta": 2.5
+            "value": 52.6,
+            "delta": 0
         }
     },
     "suites": {
         "total": 5,
         "items": [
+            {
+                "uid": "23c65f0db8cd2111e631a3d448e92b9a",
+                "name": "Quote",
+                "statistic": {
+                    "failed": 3,
+                    "broken": 0,
+                    "skipped": 0,
+                    "passed": 1,
+                    "unknown": 0,
+                    "total": 4
+                }
+            },
+            {
+                "uid": "bb83abe765b23afdcc20d6bfef6662fd",
+                "name": "Offer",
+                "statistic": {
+                    "failed": 3,
+                    "broken": 0,
+                    "skipped": 0,
+                    "passed": 1,
+                    "unknown": 0,
+                    "total": 4
+                }
+            },
             {
                 "uid": "717c13d1cf04dd5d4cee3118f3127eb0",
                 "name": "Checkout",
@@ -56,30 +80,6 @@
                     "passed": 2,
                     "unknown": 0,
                     "total": 4
-                }
-            },
-            {
-                "uid": "bb83abe765b23afdcc20d6bfef6662fd",
-                "name": "Offer",
-                "statistic": {
-                    "failed": 2,
-                    "broken": 0,
-                    "skipped": 0,
-                    "passed": 1,
-                    "unknown": 0,
-                    "total": 3
-                }
-            },
-            {
-                "uid": "23c65f0db8cd2111e631a3d448e92b9a",
-                "name": "Quote",
-                "statistic": {
-                    "failed": 2,
-                    "broken": 0,
-                    "skipped": 0,
-                    "passed": 1,
-                    "unknown": 0,
-                    "total": 3
                 }
             },
             {
@@ -115,17 +115,35 @@
                 "uid": "8fb3a91ba5aaf9de24cc8a92edc82b5d",
                 "name": "Product defects",
                 "statistic": {
-                    "failed": 7,
+                    "failed": 9,
                     "broken": 0,
                     "skipped": 0,
                     "passed": 0,
                     "unknown": 0,
-                    "total": 7
+                    "total": 9
                 }
             }
         ]
     },
     "history": [
+        {
+            "build": 5,
+            "label": "#5",
+            "total": 19,
+            "passed": 10,
+            "failed": 9,
+            "passRate": 52.6,
+            "duration": 0.4
+        },
+        {
+            "build": 4,
+            "label": "#4",
+            "total": 19,
+            "passed": 10,
+            "failed": 9,
+            "passRate": 52.6,
+            "duration": 0.4
+        },
         {
             "build": 3,
             "label": "#3",
@@ -160,8 +178,8 @@
             "environment": "QA",
             "browser": "Chromium",
             "release": "0.1",
-            "generatedOn": "2026-07-16T06:28:42.504Z",
-            "duration": "18.9 sec"
+            "generatedOn": "2026-07-16T13:06:23.789Z",
+            "duration": "24.1 sec"
         },
         "topSlowTests": [],
         "recentFailures": [
@@ -170,7 +188,7 @@
                 "scenario": "Out Of Stock Seller",
                 "feature": "buyBox",
                 "module": "Offer",
-                "duration": "2.7 sec",
+                "duration": "3.3 sec",
                 "status": "Failed",
                 "error": "Error: Seller Service Unavailable",
                 "errorLocation": "offer.steps.ts:28",
@@ -181,24 +199,10 @@
             },
             {
                 "severity": "Normal",
-                "scenario": "Invalid Search",
-                "feature": "productSearch",
-                "module": "Search",
-                "duration": "2.5 sec",
-                "status": "Failed",
-                "error": "Error: expect(received).toBeTruthy() ",
-                "errorLocation": "search.steps.ts:28",
-                "tags": [
-                    "Negative",
-                    "Search"
-                ]
-            },
-            {
-                "severity": "Normal",
-                "scenario": "Seller Selection",
+                "scenario": "Multi Seller Selection",
                 "feature": "buyBox",
                 "module": "Offer",
-                "duration": "4.5 sec",
+                "duration": "2.9 sec",
                 "status": "Failed",
                 "error": "Error: expect(received).toBe(expected) // Object.is equality ",
                 "errorLocation": "offer.steps.ts:24",
@@ -209,21 +213,35 @@
             },
             {
                 "severity": "Normal",
-                "scenario": "Payment Gateway Timeout",
-                "feature": "payment",
-                "module": "Checkout",
-                "duration": "0.1 sec",
+                "scenario": "Seller Selection",
+                "feature": "buyBox",
+                "module": "Offer",
+                "duration": "2.1 sec",
                 "status": "Failed",
-                "error": "Error: Timeout while waiting for payment gateway",
-                "errorLocation": "checkout.steps.ts:27",
+                "error": "Error: expect(received).toBe(expected) // Object.is equality ",
+                "errorLocation": "offer.steps.ts:24",
                 "tags": [
-                    "Checkout",
+                    "Offer",
                     "Regression"
                 ]
             },
             {
                 "severity": "Normal",
-                "scenario": "Cancel Quote",
+                "scenario": "Invalid Search",
+                "feature": "productSearch",
+                "module": "Search",
+                "duration": "2.9 sec",
+                "status": "Failed",
+                "error": "Error: expect(received).toBeTruthy() ",
+                "errorLocation": "search.steps.ts:28",
+                "tags": [
+                    "Negative",
+                    "Search"
+                ]
+            },
+            {
+                "severity": "Normal",
+                "scenario": "Edit Quote",
                 "feature": "createQuote",
                 "module": "Quote",
                 "duration": "0.1 sec",

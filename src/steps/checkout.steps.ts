@@ -17,6 +17,7 @@ When('user applies invalid coupon', async () => {
 });
 
 Then('coupon validation should be displayed', async () => {
+  await new Promise(resolve => setTimeout(resolve, 2000));
   expect("Coupon Applied").toBe("Invalid Coupon");
 });
 

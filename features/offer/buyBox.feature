@@ -14,6 +14,12 @@ Feature: Offer
     Then seller inventory should be updated
 
   @Regression
+  Scenario: Multi Seller Selection
+    Given user opens PDP
+    When user changes seller
+    Then seller inventory should be updated
+
+  @Regression
   Scenario: Out Of Stock Seller
     Given user opens PDP
     When user selects unavailable seller

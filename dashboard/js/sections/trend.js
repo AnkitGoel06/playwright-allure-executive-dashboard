@@ -19,94 +19,155 @@ export function renderTrend(data) {
     gradient.addColorStop(0, "rgba(34,197,94,.25)");
     gradient.addColorStop(1, "rgba(34,197,94,0)");
 
-    trendChart = new Chart(ctx, {
+    requestAnimationFrame(() => {
+        trendChart = new Chart(ctx, {
 
-        type: "line",
+            type: "line",
 
-        data: {
+            data: {
 
-            labels: history.map(x => x.label),
+                labels: history.map(x => x.label),
 
-            datasets: [
+                datasets: [
 
-                {
-                    label: "Pass %",
-                    data: history.map(x => x.passRate),
+                    {
+                        label: "Pass %",
+                        data: history.map(x => x.passRate),
 
-                    yAxisID: "pass",
+                        yAxisID: "pass",
 
-                    borderColor: "#22c55e",
+                        borderColor: "#22c55e",
 
-                    backgroundColor: gradient,
+                        backgroundColor: gradient,
 
-                    fill: true,
+                        fill: true,
 
-                    borderWidth: 3,
+                        borderWidth: 3,
 
-                    pointRadius: 4,
+                        pointRadius: 4,
 
-                    pointHoverRadius: 6,
+                        pointHoverRadius: 6,
 
-                    tension: .35
-                },
+                        tension: .35
+                    },
 
-                {
-                    label: "Duration (min)",
+                    {
+                        label: "Duration (min)",
 
-                    data: history.map(x => x.duration),
+                        data: history.map(x => x.duration),
 
-                    yAxisID: "duration",
+                        yAxisID: "duration",
 
-                    borderColor: "#3b82f6",
+                        borderColor: "#3b82f6",
 
-                    backgroundColor: "#3b82f6",
+                        backgroundColor: "#3b82f6",
 
-                    borderWidth: 3,
+                        borderWidth: 3,
 
-                    pointRadius: 4,
+                        pointRadius: 4,
 
-                    pointHoverRadius: 6,
+                        pointHoverRadius: 6,
 
-                    fill: false,
+                        fill: false,
 
-                    tension: .35
-                }
+                        tension: .35
+                    }
 
-            ]
-
-        },
-
-        options: {
-
-            responsive: true,
-
-            maintainAspectRatio: false,
-
-            interaction: {
-
-                mode: "index",
-
-                intersect: false
+                ]
 
             },
 
-            plugins: {
+            options: {
 
-                legend: {
+                responsive: true,
 
-                    position: "bottom",
+                maintainAspectRatio: false,
 
-                    labels: {
+                interaction: {
 
-                        usePointStyle: true,
+                    mode: "index",
 
-                        padding: 20,
+                    intersect: false
 
-                        font: {
+                },
 
-                            size: 13,
+                plugins: {
 
-                            weight: 600
+                    legend: {
+
+                        position: "bottom",
+
+                        labels: {
+
+                            usePointStyle: true,
+
+                            padding: 20,
+
+                            font: {
+
+                                size: 13,
+
+                                weight: 600
+
+                            }
+
+                        }
+
+                    }
+
+                },
+
+                scales: {
+
+                    pass: {
+
+                        type: "linear",
+
+                        position: "left",
+
+                        min: 0,
+
+                        max: 100,
+
+                        ticks: {
+
+                            callback: value => value + "%"
+
+                        },
+
+                        grid: {
+
+                            color: "#edf2f7"
+
+                        }
+
+                    },
+
+                    duration: {
+
+                        type: "linear",
+
+                        position: "right",
+
+                        grid: {
+
+                            drawOnChartArea: false
+
+                        },
+
+                        ticks: {
+
+                            callback: value => value + "m"
+
+                        }
+
+                    },
+
+                    x: {
+
+                        grid: {
+
+                            display: false
 
                         }
 
@@ -114,68 +175,10 @@ export function renderTrend(data) {
 
                 }
 
-            },
-
-            scales: {
-
-                pass: {
-
-                    type: "linear",
-
-                    position: "left",
-
-                    min: 0,
-
-                    max: 100,
-
-                    ticks: {
-
-                        callback: value => value + "%"
-
-                    },
-
-                    grid: {
-
-                        color: "#edf2f7"
-
-                    }
-
-                },
-
-                duration: {
-
-                    type: "linear",
-
-                    position: "right",
-
-                    grid: {
-
-                        drawOnChartArea: false
-
-                    },
-
-                    ticks: {
-
-                        callback: value => value + "m"
-
-                    }
-
-                },
-
-                x: {
-
-                    grid: {
-
-                        display: false
-
-                    }
-
-                }
-
             }
 
-        }
+        });
+
 
     });
-
 }

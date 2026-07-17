@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="css/modules.css">
     <link rel="stylesheet" href="css/trend.css">
     <link rel="stylesheet" href="css/widgets.css">
-    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
@@ -63,14 +62,9 @@
 
             <div class="header-right">
 
-                <button class="btn btn-outline">
+                <button class="btn btn-outline" id="openAllureBtn">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     Open Allure
-                </button>
-
-                <button class="btn btn-primary">
-                    <i class="fa-solid fa-download"></i>
-                    Export Report
                 </button>
 
             </div>
@@ -292,8 +286,12 @@
         </section>
 
     </div>
+
+    <!-- DASHBOARD_DATA -->
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="module" src="js/app.js"></script>
+    <script src="dist/app.bundle.js"></script>
+    <!-- <script type="module" src="js/app.js"></script> -->
 </body>
 
 </html>

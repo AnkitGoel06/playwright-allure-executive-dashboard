@@ -18,3 +18,9 @@ Feature: Quote
     Given user has created quote
     When user cancels quote
     Then quote should be cancelled
+
+  @Skip
+  Scenario: Edit Quote
+    Given user has created quote
+    When user cancels quote
+    Then quote should be cancelled
